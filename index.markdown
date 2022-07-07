@@ -1,6 +1,8 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
-layout: home
+layout: page
+title: About me
+order: 1
 ---
+
+Currently, I'm a college student and hobbyist programmer. <br>
+I also play video games, currently playing [Sekiro](https://www.sekirothegame.com/).
