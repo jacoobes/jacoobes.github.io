@@ -12,6 +12,7 @@ form.addEventListener('submit', function (e) {
          showVisible() //shows error
          return;
      }
+
      Pageclip.send('bSCNueNophgfnRmIhCPRi9QDRRxCw8BE',
          'default',
          { email: emailRes.type, subject: form.subject.value, message: form.message.value },
