@@ -1,8 +1,8 @@
 //Form validation
 
 const form = document.forms['myForm'];
-const errorNode = document.querySelector('.😶-text-pale.show-error');
-
+const errorNode = document.querySelector('.w3-text-red.show-error');
+const successNode = document.querySelector('.w3-text-light-green.😶-text-pale.show-success')
 const buttonSubmit = document.querySelector('.w3-button.😶-button.😶-text-pale.w3-padding-large.w3-border-0.pageclip-form__submit');
 buttonSubmit.addEventListener('click', e => {
     e.preventDefault();
@@ -20,10 +20,12 @@ buttonSubmit.addEventListener('click', e => {
             if(err) {
                 showVisible()
                 errorNode.textContent = 'Something went wrong with the form. Try again.'
+            } else {
+                successNode.style.display = 'block';
+                form.reset();
             }
         })
 
-    form.reset();
     resetError();
 })
 function showVisible() {
