@@ -10,6 +10,7 @@ buttonSubmit.addEventListener('click', e => {
     resetError();
     const emailRes = emailValidation(form.email.value)
     if(!emailRes.isValid) {
+        successNode.style.display = 'none';
         showVisible() //shows error
         return;
     }
@@ -26,7 +27,7 @@ buttonSubmit.addEventListener('click', e => {
                 form.reset();
             }
         })
-
+    console.log('fsd')
     resetError();
 })
 function showVisible() {
