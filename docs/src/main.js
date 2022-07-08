@@ -14,7 +14,7 @@ form.addEventListener('submit', function (e) {
      }
      Pageclip.send('bSCNueNophgfnRmIhCPRi9QDRRxCw8BE',
          'default',
-         { email: emailRes.type, subject: form.subject.value },
+         { email: emailRes.type, subject: form.subject.value, message: form.message.value },
          function(err) {
             if(err) {
                 showVisible()
