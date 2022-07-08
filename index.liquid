@@ -4,6 +4,7 @@ images:
     - ./assets/orangutan.jpg
 javascript:
     - ./src/date.js
+    - "https://s.pageclip.co/v1/pageclip.js"
     - ./src/main.js
 hobbies:
     - name: Programming
@@ -41,6 +42,7 @@ right-proj:
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
     <style>
         body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
         .😶, 😶-hover-matte-gray:hover {
@@ -252,15 +254,17 @@ right-proj:
             <p><i class="fa fa-envelope fa-fw 😶-text-pale w3-large w3-margin-right"> </i> Email: jacobnguyend@gmail.com</p>
         </div><br>
         <p>Let's get in touch. Send me a message:</p>
-
-        <form action="{{ javascript[0] }}" target="_blank">
-            <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name" style="background-color: #faedd4"></p>
-            <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email" style="background-color: #faedd4"></p>
-            <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject" style="background-color: #faedd4"></p>
-            <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message" style="background-color: #faedd4"></p>
+        <p class="😶-text-pale show-error" style="display: none">Invalid form.</p>
+        <form name="myForm" action="https://send.pageclip.co/bSCNueNophgfnRmIhCPRi9QDRRxCw8BE" class="pageclip-form" method="post">
+            <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="email" style="background-color: #faedd4"></p>
+            <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="subject" style="background-color: #faedd4"></p>
             <p>
-                <button class="w3-button 😶-button 😶-text-pale w3-padding-large w3-border-0" type="submit">
-                    <i class="fa fa-paper-plane"></i> SEND MESSAGE
+                <button class="w3-button 😶-button 😶-text-pale w3-padding-large w3-border-0 pageclip-form__submit"
+                        type="submit"
+                >
+                    <span>
+                        <i class="fa fa-paper-plane"></i> SEND MESSAGE
+                    </span>
                 </button>
             </p>
         </form>
@@ -277,6 +281,6 @@ right-proj:
     <!-- END PAGE CONTENT -->
 </div>
 {% for script in javascript %}
-    <script src="{{ script }}"></script>
+    <script src="{{ script }}" charset="utf-8"></script>
 {% endfor %}
 </body>
