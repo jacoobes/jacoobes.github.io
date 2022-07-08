@@ -14,7 +14,7 @@ function setDate() {
     const nowDate = new Date()
     const original = document.querySelector('.paragraph-me').textContent;
     const appendHowLongIBeenCoding = `
-    I've been programming for approximately ${DateDiff.inDays(dateStartedApprox, nowDate)} days. `;
+    Started programming ${DateDiff.inDays(dateStartedApprox, nowDate)} days ago. `;
     document.querySelector('.paragraph-me').textContent = appendHowLongIBeenCoding + original
 }
 window.onload = ()=> {
