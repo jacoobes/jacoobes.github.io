@@ -4,6 +4,7 @@ const form = document.forms['myForm'];
 const errorNode = document.querySelector('.w3-text-red.show-error');
 const successNode = document.querySelector('.w3-text-light-green.😶-text-pale.show-success')
 const buttonSubmit = document.querySelector('.w3-button.😶-button.😶-text-pale.w3-padding-large.w3-border-0.pageclip-form__submit');
+
 buttonSubmit.addEventListener('click', e => {
     e.preventDefault();
     resetError();
@@ -34,6 +35,7 @@ function showVisible() {
 
 function resetError() {
     errorNode.style.display = 'none';
+    successNode.style.display = 'none';
     errorNode.textContent = 'Invalid form'
 }
 
