@@ -1,9 +1,6 @@
 ---
 title: jacoobes
-images:
-    - ./assets/orangutan.jpg
 javascript:
-    - ./src/date.js
     - "https://s.pageclip.co/v1/pageclip.js"
     - ./src/main.js
 hobbies:
@@ -70,7 +67,6 @@ right-proj:
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
     <!-- Avatar image in top left corner -->
-    <img src="{{ images[0] }}" style="width:100%" alt="profile">
     <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-dark-gray">
         <i class="fa fa-home w3-xxlarge"></i>
         <p>{{ hrefs[0] | upcase }}</p>
@@ -103,8 +99,7 @@ right-proj:
 <div class="w3-padding-large" id="main">
     <!-- Header/Home -->
     <header class="w3-container w3-padding-32 w3-center 😶" id="home">
-        <h1 class="w3-jumbo"><span class="w3-hide-small">Hi, I'm</span> {{ title }}</h1>
-        <img src= "{{ images[0] }}" class="w3-image" width="992" height="1108" alt="boy">
+        <h1 class="w3-jumbo"><span class="w3-hide-small">Hi, I'm</span> {{ title }}.</h1>
     </header>
 
     <!-- About Section -->
@@ -114,14 +109,14 @@ right-proj:
         <p class="paragraph-me"> I'm a college student focusing on a computer science major and hobbyist programmer.
             Currently into making libraries, frameworks, and learning systems programming.
         </p>
-        <h2 class="w3-padding-16  w3-justify 😶-text-pale" id="hobbies">Hobbies</h2>
-        <hr style="width:200px" class="w3-opacity">
-           {% for hobby in hobbies %}
-                <p class="😶-text-pale">{{ hobby.name }}</p>
-                <ul>
-                 <li class = "😶-text-pale">{{ hobby.description }}</li>
-                </ul>
-           {% endfor %}
+        {% comment %}<h2 class="w3-padding-16  w3-justify 😶-text-pale" id="hobbies">Hobbies</h2>{% endcomment %}
+        {% comment %}<hr style="width:200px" class="w3-opacity">{% endcomment %}
+           {% comment %}{% for hobby in hobbies %}{% endcomment %}
+                {% comment %}<p class="😶-text-pale">{{ hobby.name }}</p>{% endcomment %}
+                {% comment %}<ul>{% endcomment %}
+                 {% comment %}<li class = "😶-text-pale">{{ hobby.description }}</li>{% endcomment %}
+                {% comment %}</ul>{% endcomment %}
+           {% comment %}{% endfor %}{% endcomment %}
 
 
      <!--   <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
@@ -204,7 +199,6 @@ right-proj:
                 <i class="fa fa-github"></i> View here
             </button>
         </a>
-
     </div>
     <!-- Grid for pricing tables -->
     <div class="w3-content w3-row-padding w3-justify">
@@ -218,8 +212,7 @@ right-proj:
                 <li class="😶-text-pale w3-hover-light-green w3-padding-16">SEO Optimization</li>
                 <li class="😶-text-pale w3-hover-light-green w3-padding-16">Future proof</li>
                 <li class="😶-text-pale w3-hover-light-green w3-padding-16">
-                    <h2>$ 35</h2>
-                    <span class="w3-opacity">single payment (negotiable)</span>
+                    <h4>Prices negotiable</h4>
                 </li>
                 <li class="w3-light-grey w3-padding-24">
                     <button class="w3-button w3-white w3-padding-large w3-hover-grey">
@@ -237,8 +230,7 @@ right-proj:
                 <li class="😶-text-pale w3-hover-light-green w3-padding-16">SEO Optimization</li>
                 <li class="😶-text-pale w3-hover-light-green w3-padding-16">Future proof</li>
                 <li class="😶-text-pale w3-hover-light-green w3-padding-16">
-                    <h2>$ 75</h2>
-                    <span class="w3-opacity">single payment (negotiable)</span>
+                    <h4>Prices negotiable</h4>
                 </li>
                 <li class="w3-light-grey w3-padding-24">
                     <button class="w3-button w3-white w3-padding-large w3-hover-gray">
@@ -282,9 +274,8 @@ right-proj:
     <!-- Footer -->
     <footer class="w3-content w3-padding-64 😶-text-pale w3-xlarge">
         <i class="fa fa-github w3-hover-opacity"></i>
-        <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-        <!-- End footer -->
     </footer>
+    <!-- End footer -->
 
     <!-- END PAGE CONTENT -->
 </div>
