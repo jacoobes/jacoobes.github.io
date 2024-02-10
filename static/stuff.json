@@ -5,6 +5,11 @@
         "link": "https://github.com/sern-handler"
     },
     {
+        "name": "GPT4ALL nodejs bindings",
+        "des": "I'm the main maintainer for the nodejs bindings",
+        "link": "https://github.com/nomic-ai/gpt4all"
+    },
+    {
         "name": "slowscript",
         "link": "https://github.com/jacoobes/slowscript",
         "des": "programming language"
