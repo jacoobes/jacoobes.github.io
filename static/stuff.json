@@ -15,6 +15,11 @@
         "des": "programming language"
     },
     {
+        "name": "ScratchPaper",
+        "link": "https://github.com/jacoobes/ScratchPaper",
+        "des": "Quick math as a Minecraft command"
+    },
+    {
         "name": "ShaMo",
         "link": "https://github.com/mtpham017/hackathon2023sase",
         "des": "Manage a virtual pantry and generate recipes"
