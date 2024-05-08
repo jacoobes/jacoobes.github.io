@@ -15,6 +15,11 @@
         "des": "programming language"
     },
     {
+        "name": "AirBin",
+        "link": "https://github.com/jacoobes/airbin",
+        "des": "Pastebin made of air"
+    },
+    {
         "name": "ScratchPaper",
         "link": "https://github.com/jacoobes/ScratchPaper",
         "des": "Quick math as a Minecraft command"
