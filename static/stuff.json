@@ -32,6 +32,11 @@
         "name": "helium",
         "link": "https://github.com/jacoobes/helium",
         "des": "Code editor made with desktop compose"
+    },
+    {
+        "name": "Semantic Search Bot",
+        "link": "https://github.com/jacoobes/aiproj",
+        "des": "Perform Semantic Search on discord servers"
     }
 ]
 
