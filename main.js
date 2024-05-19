@@ -10,15 +10,12 @@ const mapped_json = () => {
                     `<a href=\"${obj.link}\"> 
                         <p>${obj.name}</p>
                     </a>`
-                    : `<p class=private>${obj.name}</p>`
-                }
+                    : `<p class=private>${obj.name}</p>`}
             </h3>
             <ul>
                 <li>${obj.des}</li>
             </ul>
-        </div>
-        `).join('\n')} 
-    `;
+        </div>`).join('\n')}`;
 }
 const app = document.querySelector('.app')
 

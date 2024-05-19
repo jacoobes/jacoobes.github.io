@@ -41,8 +41,6 @@ h1 {
   margin: 0 auto;
   padding: 1rem;
   text-align: left;
-  overflow: auto;
-  max-height: 100vh;
 }
 .private {
     color: #f77272; /* Set text color to red */
