@@ -6,7 +6,7 @@
     },
     {
         "name": "GPT4ALL nodejs bindings",
-        "des": "I'm the main maintainer for the nodejs bindings",
+        "des": "Node.js bindings for llama.cpp",
         "link": "https://github.com/nomic-ai/gpt4all"
     },
     {

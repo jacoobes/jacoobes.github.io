@@ -1,0 +1,61 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Helvetica';
+    margin: 16px;
+}
+
+body {
+}
+
+.headerandlinks div  {
+    align-items: baseline;
+    display:flex;
+}
+
+.headerandlinks div > a {
+    padding: 0 0 0 10px;
+}
+
+
+.project-item {
+    padding: 10px 0px 10px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.project-item:hover {
+    background-color: #f0f0f0; /* Change color on hover */
+}
+.myname {
+    font-size: 7rem;
+    margin: 0.5rem 0 0.5rem 0;
+}
+
+@media (max-width: 768px) {
+    .myname {
+        font-size: 5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .myname {
+        font-size: 3rem;
+    }
+}
+
+.secondhalf {
+    border-left: thin solid black;
+}
+.secondhalf .title {
+    padding: 10px 20px 10px 10px;
+    border-bottom: thin solid black;
+    position: sticky;
+    background-color: white;
+    top: 0;
+
+}
