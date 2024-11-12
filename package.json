@@ -4,13 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "watch:11ty": "eleventy --serve",
-    "preview": "vite preview"
+    "build": "eleventy",
+    "watch:11ty": "eleventy --serve"
   },
   "devDependencies": {
-    "vite": "^5.1.0",
     "@11ty/eleventy": "^3.0.0"
   }
 }
