@@ -1,99 +1,23 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+
+html {
+    font-family: 'Helvetica'
 }
 
-body {
-  margin: 0;
-  display: flex;
-  min-width: 320px;
-  min-height: 100vh;
+.headerandlinks {
+    max-height: 50vh;
+}
+.project-item {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
- h4 {
-    font-family: "Inter", Courier, monospace; /* Set font to monospace */
-  }
-.app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 1rem;
-  text-align: left;
-}
-.private {
-    color: #f77272; /* Set text color to red */
-}
-.center {
-    text-align: left;
-    margin-right: auto;
-    width: 50%; /* Adjust this width as needed */
-}
-
-@media only screen and (max-width: 600px) {
-    .center {
-      width: 95%; /* Adjust width for smaller screens */
-    }
-} 
-
-.card {
-  padding: 1em;
-}
-
-.card:hover {
-  color: red
-  border-color: #646cff;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.project-item:hover {
+    background-color: #f0f0f0; /* Change color on hover */
 }

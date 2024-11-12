@@ -6,9 +6,11 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "watch:11ty": "eleventy --serve",
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^5.1.0"
+    "vite": "^5.1.0",
+    "@11ty/eleventy": "^3.0.0"
   }
 }
