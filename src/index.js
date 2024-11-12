@@ -20,20 +20,19 @@ function applyTheme(theme) {
     localStorage.setItem('theme', 'light');
   }
 }
+const savedTheme = localStorage.getItem('theme');
+const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-const root = window.document.documentElement;
-root.classList.remove("light", "dark");
-
-if (theme === "system") {
-  const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-  root.classList.add(systemTheme);
-  return;
+if (savedTheme) {
+  applyTheme(savedTheme);
+} else {
+  applyTheme(prefersDarkScheme ? 'dark' : 'light');
 }
 
-root.classList.add(theme);
 
 // Add event listener to the toggle
 document.getElementById('dark-mode-toggle').addEventListener('change', function () {
   const newTheme = this.checked ? 'dark' : 'light';
   applyTheme(newTheme);
 });
+

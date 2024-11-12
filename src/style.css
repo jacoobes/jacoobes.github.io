@@ -5,10 +5,15 @@
 }
 
 :root {
-  --background-color: white;
-  --text-color: black;
-
+    --background-color: white;
+    --text-color: black;
 }
+
+.dark {
+  --background-color: black;
+  --text-color: white;
+}
+
 
 html {
     font-family: 'Helvetica';
@@ -20,13 +25,8 @@ body {
   color: var(--text-color);
   transition: background-color 0.3s, color 0.3s;
 }
-/* Dark Mode */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background-color: black;
-    --text-color: white;
-  }
-}
+
+
 
 .headerandlinks div  {
     align-items: baseline;
