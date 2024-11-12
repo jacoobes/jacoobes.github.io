@@ -4,12 +4,28 @@
     box-sizing: border-box;
 }
 
+:root {
+  --background-color: white;
+  --text-color: black;
+
+}
+
 html {
     font-family: 'Helvetica';
     margin: 16px;
 }
 
 body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: black;
+    --text-color: white;
+  }
 }
 
 .headerandlinks div  {
@@ -29,7 +45,7 @@ body {
 }
 
 .project-item:hover {
-    background-color: #f0f0f0; /* Change color on hover */
+    background-color: gray; /* Change color on hover */
 }
 .myname {
     font-size: 7rem;
@@ -55,7 +71,8 @@ body {
     padding: 10px 20px 10px 10px;
     border-bottom: thin solid black;
     position: sticky;
-    background-color: white;
+    color: var(--text-color);
+    background-color: var(--background-color);
     top: 0;
 
 }
