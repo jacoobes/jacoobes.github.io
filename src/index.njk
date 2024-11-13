@@ -20,40 +20,45 @@
             <h1 class="myname">jacoobes</h1>
             "<span><i>{{ quote }}</i></span>"
             <div> 
-                <span href="https://github.com/jacoobes">
-                   (links)
-                </span>
+                <span > (links) </span>
                 {% for link in links %}
                     <a href="{{ link.url }}">
                         <h1>{{ link.label }}</h1>
                     </a>
                 {% endfor %}
             </div>
-            <div> 
-            <span href="https://github.com/jacoobes">
-                   (settings)
-            </span>
-
-            <label class="theme-toggle">
+            <div class="settings"> 
+                <span>(settings)</span>
+                <label class="theme-toggle"></label>
                 <input type="checkbox" id="dark-mode-toggle">
-                <span>Dark Mode</span>
-            </label>
+                <span>Dark</span>
+            </div>
+            <div class="contact">
+                <span>(contact)</span>
+                <form action="https://send.pageclip.co/bSCNueNophgfnRmIhCPRi9QDRRxCw8BE" class="pageclip-form" method="post">
+                  <input type="text" required name="subject" class="pure-input" placeholder="subject" />
+                  <input type="email" required name="email" placeholder="your contact" />
+                  <button type="submit" class="pure-button pageclip-form__submit">
+                    Send
+                  </button>
+                </form>
             </div>
         </div>
     </div>
     <div class="secondhalf pure-u-md-1-2 pure-u-1"> 
           <div class="title">
               <span>
-              (Projects)
+                (Projects)
               </span>
           </div>
           {% for project in projects %}
-            <div class="project-item content" data-link="{{ project.link or 'NONE' }}">
+            <div class="project-item" data-link="{{ project.link or 'NONE' }}">
                 <strong> {{ project.name }} </strong> {{ linksvg() }}
                 <h1>{{ project.des }} </h1>
             </div>
           {% endfor %}
     </div>
+    <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
     <script src="/index.js"></script> <!-- Include your JavaScript -->
 </body>
 </html>

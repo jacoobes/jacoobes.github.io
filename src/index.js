@@ -36,3 +36,20 @@ document.getElementById('dark-mode-toggle').addEventListener('change', function 
   applyTheme(newTheme);
 });
 
+var form = document.querySelector('.pageclip-form')
+const button = form.querySelector('button[type="submit"]')
+Pageclip.form(form, {
+  onSubmit: function (event) { 
+      button.innerText = "..."
+      button.setAttribute('disabled', 'true');
+  },
+  onResponse: function (error, response) {
+    button.innerText = "Send"
+    button.removeAttribute('disabled');
+    setTimeout(() => {
+        document.querySelector('#form-success').remove(); 
+    }, 2000);
+  },
+  successTemplate: '<span id="form-success">Thank you!</span>'
+});
+

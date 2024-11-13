@@ -27,18 +27,24 @@ body {
 }
 
 
-
 .headerandlinks div  {
     align-items: baseline;
     display:flex;
+    padding: 10px 0 10px 0;
+}
+
+.headerandlinks:last-child {
+    padding: 0 0 20px 0;
 }
 
 .headerandlinks div > a {
     padding: 0 0 0 10px;
 }
-.headerandlinks div > label {
-    padding: 0 0 0 10px;
-}
+
+#dark-mode-toggle { 
+    transform: scale(2);
+    margin: 0 10px 0 10px;
+ }
 
 .project-item {
     padding: 10px 0px 10px 10px;
@@ -46,25 +52,35 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.project-item:hover {
-    background-color: gray; /* Change color on hover */
+
+.project-item  {
+  display: block;
+  position: relative;
 }
+.project-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: var(--text-color);
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
+}
+.project-item:hover::after,
+.project-item:focus::after {
+  opacity: 1;
+  transform: translate3d(0, 0.2em, 0);
+}
+
+/* https://stackoverflow.com/a/62808509 */
 .myname {
-    font-size: 7rem;
+    font-size: clamp(3rem, 10vw, 5rem);
     margin: 0.5rem 0 0.5rem 0;
 }
 
-@media (max-width: 768px) {
-    .myname {
-        font-size: 5rem;
-    }
-}
 
-@media (max-width: 480px) {
-    .myname {
-        font-size: 3rem;
-    }
-}
 
 .secondhalf {
     border-left: thin solid black;
@@ -76,5 +92,5 @@ body {
     color: var(--text-color);
     background-color: var(--background-color);
     top: 0;
-
+    z-index:2;
 }
