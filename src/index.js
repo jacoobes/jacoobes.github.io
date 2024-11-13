@@ -28,10 +28,14 @@ if (savedTheme) {
 } else {
   applyTheme(prefersDarkScheme ? 'dark' : 'light');
 }
+const togglebtn = document.getElementById('dark-mode-toggle');
+if(prefersDarkScheme) {
+    togglebtn.checked = true 
+}
 
 
 // Add event listener to the toggle
-document.getElementById('dark-mode-toggle').addEventListener('change', function () {
+togglebtn.addEventListener('change', function () {
   const newTheme = this.checked ? 'dark' : 'light';
   applyTheme(newTheme);
 });
