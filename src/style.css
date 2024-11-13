@@ -36,7 +36,9 @@ body {
 .headerandlinks div > a {
     padding: 0 0 0 10px;
 }
-
+.headerandlinks div > label {
+    padding: 0 0 0 10px;
+}
 
 .project-item {
     padding: 10px 0px 10px 10px;
