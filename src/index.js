@@ -20,16 +20,18 @@ function applyTheme(theme) {
     localStorage.setItem('theme', 'light');
   }
 }
-const savedTheme = localStorage.getItem('theme');
+let savedTheme = localStorage.getItem('theme');
 const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
 if (savedTheme) {
   applyTheme(savedTheme);
 } else {
+  let resolved = prefersDarkScheme ? 'dark' : 'light';
+  savedTheme = resolved;
   applyTheme(prefersDarkScheme ? 'dark' : 'light');
 }
 const togglebtn = document.getElementById('dark-mode-toggle');
-if(prefersDarkScheme) {
+if(savedTheme === 'dark') {
     togglebtn.checked = true 
 }
 
