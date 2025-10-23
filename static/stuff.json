@@ -1,5 +1,10 @@
 [
     {
+        "name": "Euclase",
+        "des": "lisp bytecode interpreter, handwritten in C",
+        "link": "https://github.com/jacoobes/euclase"
+    },
+    {
         "name": "MikeGPT",
         "des": "RAG / AI chatbot for Louisiana State University",
         "link": "https://mikegpt.lsu.edu"
