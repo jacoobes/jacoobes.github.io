@@ -1,13 +1,17 @@
-name: Deploy static site to Pages
+name: Deploy static site to GitHub Pages
 
 on:
   push:
-    branches: ["main"]
+    branches: ["main"]  # or "master" if that's your default branch
 
 permissions:
   contents: read
   pages: write
   id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
 
 jobs:
   deploy:
@@ -16,13 +20,22 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Upload artifact
+      # OPTIONAL: if you have a build step (like npm run build), add it here:
+      # - name: Install and build
+      #   run: |
+      #     npm ci
+      #     npm run build
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .  # your static files root
+          path: .  # path to your static site (adjust if needed, e.g. "dist" or "public")
 
       - name: Deploy to GitHub Pages
         id: deployment
