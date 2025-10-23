@@ -2,7 +2,7 @@ name: Deploy static site to GitHub Pages
 
 on:
   push:
-    branches: ["main"]  # or "master" if that's your default branch
+    branches: ["master"]  # or "master" if that's your default branch
 
 permissions:
   contents: read
