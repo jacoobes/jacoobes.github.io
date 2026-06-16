@@ -7,11 +7,13 @@
 :root {
     --background-color: white;
     --text-color: black;
+    --link-color: #2563eb;
 }
 
 .dark {
   --background-color: black;
   --text-color: white;
+  --link-color: #60a5fa;
 }
 
 
@@ -81,6 +83,11 @@ body {
 }
 
 
+
+.link-style {
+    text-decoration: none;
+    color: var(--link-color);
+}
 
 .secondhalf {
     border-left: thin solid black;

@@ -29,10 +29,10 @@
             <h1 class="myname">jacoobes</h1>
             "<span><i>{{ quote }}</i></span>"
             <div> 
-                <span > (links) </span>
+                <span> (links) </span>
                 {% for link in links %}
-                    <a href="{{ link.url }}">
-                        <h1>{{ link.label }}</h1>
+                    <a class="link-style" href="{{ link.url }}">
+                        <h1>{{ link.label }} {{ linksvg() }}</h1>
                     </a>
                 {% endfor %}
             </div>
