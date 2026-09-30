@@ -1,13 +1,22 @@
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    box-sizing: border-box;
+     box-sizing: border-box;
 }
+
 
 :root {
     --background-color: white;
     --text-color: black;
     --link-color: #2563eb;
+
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 16px;
+    --space-4: 24px;
+    --space-5: 32px;
+    --space-6: 64px;
+    --space-7: 128px;
 }
 
 .dark {
@@ -16,88 +25,119 @@
   --link-color: #60a5fa;
 }
 
-
 html {
     font-family: 'Helvetica';
-    margin: 16px;
+    margin: var(--space-4);
 }
 
 body {
   background-color: var(--background-color);
   color: var(--text-color);
   transition: background-color 0.3s, color 0.3s;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
 }
 
+#dark-mode-toggle { margin: 0 var(--space-2) 0 var(--space-2); }
 
-.headerandlinks div  {
-    align-items: baseline;
-    display:flex;
-    padding: 10px 0 10px 0;
-}
-
-.headerandlinks:last-child {
-    padding: 0 0 20px 0;
-}
-
-.headerandlinks div > a {
-    padding: 0 0 0 10px;
-}
-
-#dark-mode-toggle { 
-    transform: scale(2);
-    margin: 0 10px 0 10px;
- }
-
-.project-item {
-    padding: 10px 0px 10px 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-
-.project-item  {
-  display: block;
-  position: relative;
-}
-.project-item::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 0.1em;
-  background-color: var(--text-color);
-  opacity: 0;
-  transition: opacity 300ms, transform 300ms;
-}
-.project-item:hover::after,
-.project-item:focus::after {
-  opacity: 1;
-  transform: translate3d(0, 0.2em, 0);
-}
 
 /* https://stackoverflow.com/a/62808509 */
-.myname {
-    font-size: clamp(3rem, 10vw, 5rem);
-    margin: 0.5rem 0 0.5rem 0;
+.namearea {
+    text-align: right;
+    grid-row: 1;
+}
+.myname { 
+    font-size: var(--space-5);
+    margin: var(--space-2) 0 var(--space-2) 0;
+}
+
+.settings {
+    text-align: right;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
 }
 
 
+.info {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+}
+
+.infotitle {
+    grid-row: 1/-1;
+    text-align: right;
+}
+
+.quote {
+    text-align: right;
+}
+
+.links {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    align-content: right;
+}
 
 .link-style {
     text-decoration: none;
     color: var(--link-color);
+    text-align: right;
 }
 
-.secondhalf {
-    border-left: thin solid black;
+.projects {
+    grid-column: 1/5;
+    display: grid;
+    grid-template-columns: 0.2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    column-gap:var(--space-3);
+    row-gap: var(--space-1);
 }
-.secondhalf .title {
-    padding: 10px 20px 10px 10px;
-    border-bottom: thin solid black;
-    position: sticky;
-    color: var(--text-color);
-    background-color: var(--background-color);
-    top: 0;
-    z-index:2;
+
+.project-item-idx {
+    grid-column: 1;
+}
+
+.project-item-name {
+    grid-column: 2/4;
+}
+
+.project-item-idx,
+.project-item-name,
+.project-item-des {
+    line-height: 15px;
+}
+
+.project-item-des {
+    grid-column: 4/9;
+    cursor: pointer;
+    text-align: right;
+}
+
+.project-item-des:hover {
+  border-color: var(--text-color);
+  background-color: var(--background-color);
+  z-index: 10;
+}
+
+
+.contact {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+.contact-title {
+    grid-row: 1/-1;
+    text-align: right;
+}
+
+
+.contact-form {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    width: 90%;
+    justify-self: end;
+    gap:  var(--space-1);
 }

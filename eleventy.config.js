@@ -7,6 +7,12 @@ export default function(eleventyConfig) {
         throwOnUndefined: true,
         autoescape: false, // warning: don’t do this!
   });
+
+
+  eleventyConfig.addFilter("padzero", function(value) {
+    if (isNaN(value)) return value;
+    return value.toString().padStart(2, '0');
+  });
   eleventyConfig.setInputDirectory('src');
   eleventyConfig.setOutputDirectory("dist");
   eleventyConfig.addNunjucksGlobal("projects", projects);

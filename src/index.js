@@ -1,4 +1,4 @@
-document.querySelectorAll('.project-item').forEach(item => {
+document.querySelectorAll('.project-item-des').forEach(item => {
     item.addEventListener('click', function() {
         const link = this.getAttribute('data-link');
         
