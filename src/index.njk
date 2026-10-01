@@ -26,33 +26,34 @@
           {% for project in projects %}
             <span class="project-item-idx">{{ loop.index0 | padzero }}</span>
             <span class="project-item-name"><strong> {{ project.name }} </strong></span>
-            <span data-link="{{ project.link or 'NONE' }}" class="project-item-des">{{ project.des }} </span>
+
+
+            <span data-link="{{ project.link or 'NONE' }}" class="project-item-des-{{ project.tilt }}">{{ project.des }} </span>
           {% endfor %}
     </div>
-    <div></div>
     <div class="info"> 
-        <div class="namearea"> 
-            <h1 class="myname">jacoobes</h1>
-            <span class="quote">"<i>{{ quote }}</i>"</span>
-        </div>
-        <div> 
-            <div class="settings"> 
-                <span class="infotitle">(settings)</span>
-                <div>
+        <div class="info-left"> 
+            <span>(name)</span> 
+            <span class="myname"> jacoobes</span>
+            <span>(settings)</span>
+            <div class="settinbutton">
                     <label class="theme-toggle"></label>
                     <input type="checkbox" id="dark-mode-toggle">
                     <span>Dark</span>
-                </div>
             </div>
-            <div class="links"> 
-                <span class="infotitle">(links)</span>
-                {% for link in links %}
-                    <a class="link-style" href="{{ link.url }}">
-                        <span>{{ link.label }} ↗</span>
-                    </a>
-                {% endfor %}
+            <span class="linktitle">(links)</span>
+            <div class="links">
+            {% for link in links %}
+                <a class="link-style" href="{{ link.url }}">
+                    <span>{{ link.label }} ↗</span>
+                </a>
+            {% endfor %}
             </div>
-            <div class="contact">
+
+        </div>
+
+        <span class="quote">{{ quote }}</span>
+<!--            <div class="contact">
                 <span class="infotitle">(contact)</span>
                 <form class="contact-form" action="https://send.pageclip.co/bSCNueNophgfnRmIhCPRi9QDRRxCw8BE" class="pageclip-form" method="post">
                   <input type="text" required name="subject" class="pure-input" placeholder="subject" />
@@ -61,9 +62,7 @@
                     Send
                   </button>
                 </form>
-            </div>
-
-        </div>
+            </div> -->
     </div>
     <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
     <script src="/index.js"></script> <!-- Include your JavaScript -->

@@ -45,7 +45,7 @@ togglebtn.addEventListener('change', function () {
 var form = document.querySelector('.pageclip-form')
 const button = form.querySelector('button[type="submit"]')
 Pageclip.form(form, {
-  onSubmit: function (event) { 
+  onSubmit: function (event) {
       button.innerText = "..."
       button.setAttribute('disabled', 'true');
   },
