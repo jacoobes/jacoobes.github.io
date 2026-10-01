@@ -32,7 +32,7 @@
     {
         "name": "LoveBytes",
         "des": "A handcrafted visual novel in C++",
-        "tilt": "left"
+        "tilt": "center"
     },
     {
         "name": "AirBin",
