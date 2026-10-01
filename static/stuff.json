@@ -15,7 +15,7 @@
         "link": "https://github.com/sern-handler"
     },
     {
-        "name": "GPT4ALL nodejs bindings",
+        "name": "GPT4ALL bindings",
         "des": "Node.js bindings for llama.cpp",
         "link": "https://github.com/nomic-ai/gpt4all"
     },

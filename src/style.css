@@ -106,7 +106,8 @@ body {
 .project-item-idx,
 .project-item-name,
 .project-item-des {
-    line-height: 15px;
+    line-height: var(--space-3); 
+    padding: var(--space-2) 0;
 }
 
 .project-item-des {
