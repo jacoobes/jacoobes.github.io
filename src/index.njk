@@ -1,69 +1,44 @@
-<!doctype html>
+---
+layout: base.njk
+bodyClass: wrapper
+---
 
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div class="projects"> 
+      {% for project in projects %}
+        <span class="project-item-idx">{{ loop.index0 | padzero }}</span>
+        <span class="project-item-name"><strong> {{ project.name }} </strong></span>
 
-    <meta name="description" content="jacoobes personal website">
-    <title>PORTFOLIO jacoobes</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css" />
-    <link rel="stylesheet" href="/style.css">
-    <script>
-      // Apply theme before first paint to prevent flash
-      (function() {
-        var theme = localStorage.getItem('theme');
-        if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-          document.documentElement.classList.add('dark');
-        }
-      })();
-    </script>
-</head>
-
-<body class="wrapper"> 
-    <div class="projects"> 
-          {% for project in projects %}
-            <span class="project-item-idx">{{ loop.index0 | padzero }}</span>
-            <span class="project-item-name"><strong> {{ project.name }} </strong></span>
-
-
-            <span data-link="{{ project.link or 'NONE' }}" class="project-item-des-{{ project.tilt }}">{{ project.des }} </span>
-          {% endfor %}
-    </div>
-    <div class="info"> 
-        <div class="info-left"> 
-            <span>(name)</span> 
-            <span class="myname"> jacoobes</span>
-            <span>(settings)</span>
-            <div class="settinbutton">
-                    <label class="theme-toggle"></label>
-                    <input type="checkbox" id="dark-mode-toggle">
-                    <span>Dark</span>
-            </div>
-            <span class="linktitle">(links)</span>
-            <div class="links">
-            {% for link in links %}
-                <a class="link-style" href="{{ link.url }}">
-                    <span>{{ link.label }} ↗</span>
-                </a>
-            {% endfor %}
-            </div>
-
+        <a href="/projects/{{ project.name | slugify }}" class="project-item-des-{{ project.tilt }}">{{ project.des }} </a>
+      {% endfor %}
+</div>
+<div class="info"> 
+    <div class="info-left"> 
+        <span>(name)</span> 
+        <span class="myname"> jacoobes</span>
+        <span>(settings)</span>
+        <div class="settinbutton">
+                <label class="theme-toggle"></label>
+                <input type="checkbox" id="dark-mode-toggle">
+                <span>Dark</span>
         </div>
-        <span class="quote">{{ quote }}</span>
-<!--            <div class="contact">
-                <span class="infotitle">(contact)</span>
-                <form class="contact-form" action="https://send.pageclip.co/bSCNueNophgfnRmIhCPRi9QDRRxCw8BE" class="pageclip-form" method="post">
-                  <input type="text" required name="subject" class="pure-input" placeholder="subject" />
-                  <input type="email" required name="email" placeholder="your contact" />
-                  <button type="submit" class="pure-button pageclip-form__submit">
-                    Send
-                  </button>
-                </form>
-            </div> -->
+        <span class="linktitle">(links)</span>
+        <div class="links">
+        {% for link in links %}
+            <a class="link-style" href="{{ link.url }}">
+                <span>{{ link.label }} ↗</span>
+            </a>
+        {% endfor %}
+        </div>
     </div>
-    <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
-    <script src="/index.js"></script> <!-- Include your JavaScript -->
-</body>
-</html>
+
+<!--        <div class="contact">
+            <span class="infotitle">(contact)</span>
+            <form class="contact-form" action="https://send.pageclip.co/bSCNueNophgfnRmIhCPRi9QDRRxCw8BE" class="pageclip-form" method="post">
+              <input type="text" required name="subject" class="pure-input" placeholder="subject" />
+              <input type="email" required name="email" placeholder="your contact" />
+              <button type="submit" class="pure-button pageclip-form__submit">
+                Send
+              </button>
+            </form>
+        </div> -->
+</div>

@@ -1,0 +1,26 @@
+---
+layout: base.njk
+bodyClass: project-page 
+pagination:
+  data: projects
+  size: 1
+  alias: project
+permalink: "/projects/{{ project.name | slugify }}/index.html"
+eleventyComputed:
+  title: "{{ project.name }} | jacoobes"
+---
+
+<main class="project-detail">
+    <a class="link-style back" href="/">← back</a>
+    <h1>{{ project.name }}</h1>
+    <p>{{ project.long or project.des }}</p>
+
+    {% if project.link %}
+        <a class="link-style" href="{{ project.link }}" target="_blank" rel="noopener">View source ↗</a>
+    {% endif %}
+
+    <nav class="project-nav">
+        {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">← prev</a>{% endif %}
+        {% if pagination.href.next %}<a href="{{ pagination.href.next }}">next →</a>{% endif %}
+    </nav>
+</main>

@@ -30,32 +30,30 @@ if (savedTheme) {
   savedTheme = resolved;
   applyTheme(prefersDarkScheme ? 'dark' : 'light');
 }
+
 const togglebtn = document.getElementById('dark-mode-toggle');
-if(savedTheme === 'dark') {
-    togglebtn.checked = true 
-}
+if (togglebtn) {
+  togglebtn.checked = savedTheme === 'dark';
+  togglebtn.addEventListener('change', function () {
+    applyTheme(this.checked ? 'dark' : 'light');
+  });
+} 
 
 
-// Add event listener to the toggle
-togglebtn.addEventListener('change', function () {
-  const newTheme = this.checked ? 'dark' : 'light';
-  applyTheme(newTheme);
-});
-
-var form = document.querySelector('.pageclip-form')
-const button = form.querySelector('button[type="submit"]')
-Pageclip.form(form, {
-  onSubmit: function (event) {
-      button.innerText = "..."
-      button.setAttribute('disabled', 'true');
-  },
-  onResponse: function (error, response) {
-    button.innerText = "Send"
-    button.removeAttribute('disabled');
-    setTimeout(() => {
-        document.querySelector('#form-success').remove(); 
-    }, 2000);
-  },
-  successTemplate: '<span id="form-success">Thank you!</span>'
-});
-
+//var form = document.querySelector('.pageclip-form')
+//const button = form.querySelector('button[type="submit"]')
+//Pageclip.form(form, {
+//  onSubmit: function (event) {
+//      button.innerText = "..."
+//      button.setAttribute('disabled', 'true');
+//  },
+//  onResponse: function (error, response) {
+//    button.innerText = "Send"
+//    button.removeAttribute('disabled');
+//    setTimeout(() => {
+//        document.querySelector('#form-success').remove(); 
+//    }, 2000);
+//  },
+//  successTemplate: '<span id="form-success">Thank you!</span>'
+//});
+//

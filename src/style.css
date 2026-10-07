@@ -4,6 +4,11 @@
      box-sizing: border-box;
 }
 
+a {
+  all: unset;
+  cursor: pointer; /* Restores the clickable hand icon */
+}
+
 
 :root {
     --background-color: white;
@@ -30,7 +35,7 @@ html {
     margin: var(--space-4);
 }
 
-body {
+.wrapper {
   background-color: var(--background-color);
   color: var(--text-color);
   transition: background-color 0.3s, color 0.3s;
@@ -38,10 +43,18 @@ body {
   overflow: hidden;
 }
 
+
+.project-page  {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+
+}
+
 #dark-mode-toggle { margin: 0 var(--space-2) 0 var(--space-2); }
 
 .myname { 
-    font-size: var(--space-5);
+    font-size: var(--space-3);
     text-align: right;
 }
 
@@ -49,26 +62,33 @@ body {
 .info {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    max-height: 25%;
+    min-height: 25%;
+    align-content:center;
+    justify-content:end;
 }
 
 .info-left {
-    grid-column: 1/3;
+    grid-column: 1/5;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    column-gap:var(--space-2);
+    row-gap: var(--space-2);
+
+}
+.settinbutton {
+    justify-self: end; 
 }
 
 .quote {
     text-align: right;
     grid-column: 3/-1;
-    grid-row: 3;
-    font-size: var(--space-5);
+    grid-row: 2;
+    font-size: var(--space-6);
 }
 
 .links {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     align-content: right;
 }
 
@@ -84,7 +104,7 @@ body {
     grid-template-columns: 0.2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     column-gap:var(--space-2);
     row-gap: var(--space-1);
-    max-height: 75%;
+    min-height: 75%;
     overflow-y: auto;
 }
 
@@ -94,11 +114,11 @@ body {
 
 .project-item-name {
     grid-column: 2/4;
+    font-size: var(--space-3);
 }
 
 .project-item-idx,
-.project-item-name,
-.project-item-des {
+.project-item-name {
     line-height: var(--space-3); 
     padding: var(--space-2) 0;
 }
@@ -108,6 +128,8 @@ body {
     cursor: pointer;
     text-align: right;
     padding: var(--space-3) 0;
+    font-size: var(--space-5);
+    text-decoration: underline;
 }
 
 .project-item-des-right {
@@ -115,6 +137,8 @@ body {
     cursor: pointer;
     text-align: right;
     padding: var(--space-3) 0;
+    font-size: var(--space-5);
+    text-decoration: underline;
 }
 
 
