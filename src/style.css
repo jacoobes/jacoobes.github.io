@@ -1,13 +1,27 @@
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    box-sizing: border-box;
+     box-sizing: border-box;
 }
+
+a {
+  all: unset;
+  cursor: pointer; /* Restores the clickable hand icon */
+}
+
 
 :root {
     --background-color: white;
     --text-color: black;
     --link-color: #2563eb;
+
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 16px;
+    --space-4: 24px;
+    --space-5: 32px;
+    --space-6: 64px;
+    --space-7: 128px;
 }
 
 .dark {
@@ -16,88 +30,141 @@
   --link-color: #60a5fa;
 }
 
-
 html {
     font-family: 'Helvetica';
-    margin: 16px;
+    margin: var(--space-4);
 }
 
-body {
+.wrapper {
   background-color: var(--background-color);
   color: var(--text-color);
   transition: background-color 0.3s, color 0.3s;
+  height: 100dvh; /* dvh handles mobile address bars perfectly */
+  overflow: hidden;
 }
 
 
-.headerandlinks div  {
-    align-items: baseline;
-    display:flex;
-    padding: 10px 0 10px 0;
+.project-page  {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+
 }
 
-.headerandlinks:last-child {
-    padding: 0 0 20px 0;
-}
+#dark-mode-toggle { margin: 0 var(--space-2) 0 var(--space-2); }
 
-.headerandlinks div > a {
-    padding: 0 0 0 10px;
-}
-
-#dark-mode-toggle { 
-    transform: scale(2);
-    margin: 0 10px 0 10px;
- }
-
-.project-item {
-    padding: 10px 0px 10px 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.myname { 
+    font-size: var(--space-3);
+    text-align: right;
 }
 
 
-.project-item  {
-  display: block;
-  position: relative;
-}
-.project-item::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 0.1em;
-  background-color: var(--text-color);
-  opacity: 0;
-  transition: opacity 300ms, transform 300ms;
-}
-.project-item:hover::after,
-.project-item:focus::after {
-  opacity: 1;
-  transform: translate3d(0, 0.2em, 0);
+.info {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    min-height: 25%;
+    align-content:center;
+    justify-content:end;
 }
 
-/* https://stackoverflow.com/a/62808509 */
-.myname {
-    font-size: clamp(3rem, 10vw, 5rem);
-    margin: 0.5rem 0 0.5rem 0;
+.info-left {
+    grid-column: 1/5;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap:var(--space-2);
+    row-gap: var(--space-2);
+
+}
+.settinbutton {
+    justify-self: end; 
 }
 
+.quote {
+    text-align: right;
+    grid-column: 3/-1;
+    grid-row: 2;
+    font-size: var(--space-6);
+}
 
+.links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: right;
+}
 
 .link-style {
     text-decoration: none;
     color: var(--link-color);
+    text-align: right;
 }
 
-.secondhalf {
-    border-left: thin solid black;
+.projects {
+    grid-column: 1/5;
+    display: grid;
+    grid-template-columns: 0.2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    column-gap:var(--space-2);
+    row-gap: var(--space-1);
+    min-height: 75%;
+    overflow-y: auto;
 }
-.secondhalf .title {
-    padding: 10px 20px 10px 10px;
-    border-bottom: thin solid black;
-    position: sticky;
-    color: var(--text-color);
-    background-color: var(--background-color);
-    top: 0;
-    z-index:2;
+
+.project-item-idx {
+    grid-column: 1;
+}
+
+.project-item-name {
+    grid-column: 2/4;
+    font-size: var(--space-3);
+}
+
+.project-item-idx,
+.project-item-name {
+    line-height: var(--space-3); 
+    padding: var(--space-2) 0;
+}
+
+.project-item-des-center {
+    grid-column: 5/9;
+    cursor: pointer;
+    text-align: right;
+    padding: var(--space-3) 0;
+    font-size: var(--space-5);
+    text-decoration: underline;
+}
+
+.project-item-des-right {
+    grid-column: 6/11;
+    cursor: pointer;
+    text-align: right;
+    padding: var(--space-3) 0;
+    font-size: var(--space-5);
+    text-decoration: underline;
+}
+
+
+.project-item-des:hover {
+  border-color: var(--text-color);
+  background-color: var(--background-color);
+  z-index: 10;
+}
+
+
+.contact {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+.contact-title {
+    grid-row: 1/-1;
+    text-align: right;
+}
+
+
+.contact-form {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    width: 90%;
+    justify-self: end;
+    gap:  var(--space-1);
 }
