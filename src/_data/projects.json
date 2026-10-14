@@ -2,7 +2,7 @@
     {
         "name": "Euclase",
         "des": "lisp bytecode interpreter & assembler",
-        "long": "I created a programming language featuring a custom assembler. It supports all basic language functions, closures, loops, etc.",
+        "long": "a language featuring a custom assembler and bytecode. Turing complete, written in C11",
         "link": "https://github.com/jacoobes/euclase",
         "tilt": "center",
         "template": "euclase"
