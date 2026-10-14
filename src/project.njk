@@ -11,16 +11,21 @@ eleventyComputed:
 ---
 
 <main class="project-detail">
-    <a class="link-style back" href="/">← back</a>
-    <h1>{{ project.name }}</h1>
-    <p>{{ project.long or project.des }}</p>
-
-    {% if project.link %}
-        <a class="link-style" href="{{ project.link }}" target="_blank" rel="noopener">View source ↗</a>
-    {% endif %}
-
     <nav class="project-nav">
-        {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">← prev</a>{% endif %}
-        {% if pagination.href.next %}<a href="{{ pagination.href.next }}">next →</a>{% endif %}
+            {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">← prev</a>{% endif %}
+            <a class="link-style back" href="/">home</a>
+            {% if pagination.href.next %}<a href="{{ pagination.href.next }}">next →</a>{% endif %}
+
     </nav>
+    <div class="{{project.template}}">
+        <p class="project-description">{{ project.des }}</p>
+        {% if project.long %}
+            <p>{{ project.long  }} </p>
+        {% endif %}
+        <h1>{{ project.name }}</h1>
+
+        {% if project.link %}
+            <a class="link-style" href="{{ project.link }}" target="_blank" rel="noopener">View source ↗</a>
+        {% endif %}
+    </div>
 </main>

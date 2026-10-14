@@ -2,61 +2,82 @@
     {
         "name": "Euclase",
         "des": "lisp bytecode interpreter & assembler",
+        "long": "I created a programming language featuring a custom assembler. It supports all basic language functions, closures, loops, etc.",
         "link": "https://github.com/jacoobes/euclase",
-        "tilt": "center"
+        "tilt": "center",
+        "template": "euclase"
     },
     {
         "name": "MikeGPT",
         "des": "AI Chatbot for Louisiana State University",
+        "long": null,
         "link": "https://mikegpt.lsu.edu",
-        "tilt": "right"
+        "tilt": "right",
+        "template": "t1"
     },
     {
         "name": "sern",
         "des": "Create a discord bot now",
+        "long": null,
         "link": "https://github.com/sern-handler",
-        "tilt": "right"
+        "tilt": "right",
+        "template": "t1"
     },
     {
         "name": "GPT4ALL bindings",
         "des": "Node.js bindings for llama.cpp",
+        "long": null,
         "link": "https://github.com/nomic-ai/gpt4all",
-        "tilt": "center"
+        "tilt": "center",
+        "template": "t1"
     },
     {
         "name": "slowscript",
         "link": "https://github.com/jacoobes/slowscript",
+        "long": null,
         "des": "Programming Language",
-        "tilt": "center"
+        "tilt": "center",
+        "template": "t1"
     },
     {
         "name": "LoveBytes",
         "des": "Visual Novel",
-        "tilt": "center"
+        "long": null,
+        "tilt": "center",
+        "template": "t1"
     },
     {
         "name": "AirBin",
         "link": "https://github.com/jacoobes/airbin",
+        "long": null,
         "des": "Pastebin",
-        "tilt": "center"
+        "tilt": "center",
+        "template": "t1"
     },
     {
         "name": "ScratchPaper",
         "link": "https://github.com/jacoobes/ScratchPaper",
+        "long": null,
         "des": "Minecraft Calculator Plugin",
-        "tilt": "center"
+        "tilt": "center",
+        "template": "t1"
     },
     {
         "name": "ShaMo",
         "link": "https://github.com/mtpham017/hackathon2023sase",
+        "long": null,
         "des": "Virtual Pantry and Recipe Generator",
-        "tilt": "center"
+        "tilt": "center",
+        "template": "t1"
     },
     
     {
         "name": "helium",
         "link": "https://github.com/jacoobes/helium",
+        "long": null,
         "des": "Code Editor",
-        "tilt": "center"
+        "tilt": "center",
+        "template": "t1"
+
     }
 ]

@@ -148,23 +148,23 @@ html {
   z-index: 10;
 }
 
+.project-nav { 
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
 
-.contact {
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr;
-}
-.contact-title {
-    grid-row: 1/-1;
-    text-align: right;
 }
 
-
-.contact-form {
+.euclase {
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr;
-    width: 90%;
-    justify-self: end;
-    gap:  var(--space-1);
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    column-gap: var(--space-2);
+}
+
+
+.euclase > .project-description { 
+    font-size: var(--space-6);
+    grid-column: 1/6;
+    
 }
