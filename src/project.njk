@@ -18,14 +18,18 @@ eleventyComputed:
 
     </nav>
     <div class="{{project.template}}">
-        <p class="project-name">{{ project.name }}</p>
-        <p class="project-description">{{ project.des }}</p>
-        {% if project.link %}
-            <a class="project-link" 
-               href="{{ project.link }}" 
-               target="_blank" 
-               rel="noopener">View source ↗</a>
-        {% endif %}
+        <div class="project-meta">
+            <p>(name)</p>
+            <p class="project-name">{{ project.name }}</p>
+
+
+            <p>(link)</p>
+            {% if project.link %}
+            <a class="project-link" href="{{ project.link }}" target="_blank" rel="noopener">View source ↗</a>
+            {% else %}
+            <span class="project-link"></span>
+            {% endif %}        
+            </div>
         {% if project.long %}
             <p class="project-long">{{ project.long  }} </p>
         {% endif %}

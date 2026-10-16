@@ -44,7 +44,8 @@
         "des": "Visual Novel",
         "long": null,
         "tilt": "center",
-        "template": "t1"
+        "template": "t1",
+        "link": null
     },
     {
         "name": "AirBin",
