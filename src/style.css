@@ -81,13 +81,6 @@ html {
     justify-self: end; 
 }
 
-.quote {
-    text-align: right;
-    grid-column: 3/-1;
-    grid-row: 2;
-    font-size: var(--space-6);
-}
-
 .links {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -123,12 +116,14 @@ html {
 .project-item-name {
     line-height: var(--space-3); 
     padding: var(--space-2) 0;
+    align-self: baseline;
 }
 
 .project-item-des-center {
     grid-column: 5/9;
     cursor: pointer;
     text-align: right;
+    align-self: baseline;
     padding: var(--space-3) 0;
     font-size: var(--space-5);
     text-decoration: underline;
@@ -138,16 +133,10 @@ html {
     grid-column: 6/11;
     cursor: pointer;
     text-align: right;
+    align-self: baseline;
     padding: var(--space-3) 0;
     font-size: var(--space-5);
     text-decoration: underline;
-}
-
-
-.project-item-des:hover {
-  border-color: var(--text-color);
-  background-color: var(--background-color);
-  z-index: 10;
 }
 
 .project-nav { 
@@ -156,38 +145,119 @@ html {
     justify-content: space-between;
 }
 
+/* EUCLASE CSS */
+
 .euclase {
     min-height: calc(95dvh - var(--space-1));
-    display: flex;
-}
-
-.euclase > .project-meta {
-    align-self: start;
     display: grid;
-    grid-template-columns: auto 2fr;
-    column-gap: var(--space-2);
-    row-gap: var(--space-2);
-    grid-auto-rows: auto;
-    row-gap: var(--space-2);
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(5, auto);
     column-gap: var(--space-3);
-
+    row-gap: var(--space-2);
 }
 
-.euclase > .project-description {
-    font-size: var(--space-3);
+.euclase .project-nav {
+    grid-column: 1 / -1;
+    grid-row: 1;
+}
+
+
+.euclase .project-meta {
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+.euclase .project-meta > * {
+    border-bottom: 1px solid var(--text-color);
+}
+
+.euclase .meta-label {
+    grid-column: 1 / 3;
+    align-self: center;
+}
+
+.euclase .meta-value {
+    grid-column: 3 / 7;
+    align-self: center;
 }
 
 .euclase .project-link {
     align-self: center;
     color: var(--link-color);
-    text-decoration: underline;
 }
 
-
-.euclase > .project-long { 
+.euclase .project-long {
+    grid-column: 7 / -1;
+    grid-row: 2 / -1;
+    align-self: end;
     font-size: var(--space-7);
     text-indent: var(--space-6);
     line-height: 1.0;
-    margin: auto 0 0;
+    margin: 0;
+    text-align: right;
+    text-wrap: balance;
+}
+
+.euclase .project-code {
+    grid-column: 1 / 2;
+    grid-row: 5;
+    tab-size: 2;
+    font-size: var(--space-3);
+    align-content: end;
+}
+
+.euclase .project-code > pre {
+    padding: var(--space-5);
+    border: 1px solid var(--text-color);
+}
+
+/* END EUCLASE CSS */
+
+/* DEFAULT PROJECT CSS */
+
+.default {
+    min-height: calc(95dvh - var(--space-1));
+    display: flex;
+    flex-direction: column;
+}
+
+.default .project-nav {
+    margin-bottom: var(--space-4);
+}
+
+.default .project-meta {
+    align-self: start;
+    display: grid;
+    row-gap: var(--space-2);
+    column-gap: var(--space-3);
+    width: 100%;
+    grid-template-columns: auto 1fr;
+}
+
+.default .project-name {
+    font-size: var(--space-5);
+}
+
+.default .project-des,
+.default .project-link {
+    align-self: center;
+}
+
+.default .project-link {
+    color: var(--link-color);
+    text-decoration: underline;
+}
+
+.default .project-long {
+    font-size: var(--space-6);
+    text-indent: var(--space-4);
+    line-height: 1.0;
+    margin-top: var(--space-4);
     text-align: right;
 }
+
+/* END DEFAULT PROJECT CSS */
+
+
+
+

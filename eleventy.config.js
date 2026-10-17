@@ -16,6 +16,7 @@ export default function(eleventyConfig) {
   eleventyConfig.addNunjucksGlobal("quote", "Simplicity is the ultimate sophistication");
   eleventyConfig.addPassthroughCopy("src/index.js");
   eleventyConfig.addPassthroughCopy("src/style.css");
+  eleventyConfig.addPassthroughCopy("src/favicon.png");
   eleventyConfig.addPassthroughCopy("CNAME");
 
 };
