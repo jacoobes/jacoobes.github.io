@@ -136,7 +136,6 @@ html {
     text-decoration: underline;
 }
 
-
 .project-nav { 
     display: flex;
     width: 100%;
@@ -156,11 +155,13 @@ html {
     row-gap: var(--space-2);
     column-gap: var(--space-3);
     width: 100%;
-
     grid-template-columns: auto 1fr;
 }
-
-.euclase .project-meta > div {
+.euclase .project-nav {
+    grid-column: 1 / -1;
+}
+.euclase .project-meta > span { 
+    align-self: center;
 }
 
 .euclase .project-link {
@@ -170,7 +171,7 @@ html {
 }
 
 
-.euclase .project-long { 
+.euclase .project-long {
     font-size: var(--space-7);
     text-indent: var(--space-6);
     line-height: 1.0;
@@ -185,6 +186,16 @@ html {
     font-size: var(--space-3);
     display: flex;
     justify-content: center;
+    padding: var(--space-2);
+}
+
+
+.euclase .project-code > pre {
+    padding: var(--space-5);
+    border: 1px solid white;
+    background-color: #bde2e8;
+    border-radius: var(--space-3);
+    color: #0f2d3c;
 }
 
 
@@ -194,6 +205,51 @@ html {
 }
 
 /* END EUCLASE CSS */
+
+/* DEFAULT PROJECT CSS */
+
+.default {
+    min-height: calc(95dvh - var(--space-1));
+    display: flex;
+    flex-direction: column;
+}
+
+.default .project-nav {
+    margin-bottom: var(--space-4);
+}
+
+.default .project-meta {
+    align-self: start;
+    display: grid;
+    row-gap: var(--space-2);
+    column-gap: var(--space-3);
+    width: 100%;
+    grid-template-columns: auto 1fr;
+}
+
+.default .project-name {
+    font-size: var(--space-5);
+}
+
+.default .project-des,
+.default .project-link {
+    align-self: center;
+}
+
+.default .project-link {
+    color: var(--link-color);
+    text-decoration: underline;
+}
+
+.default .project-long {
+    font-size: var(--space-6);
+    text-indent: var(--space-4);
+    line-height: 1.0;
+    margin-top: var(--space-4);
+    text-align: right;
+}
+
+/* END DEFAULT PROJECT CSS */
 
 
 

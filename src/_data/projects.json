@@ -1,8 +1,16 @@
 [
+    
+    {
+        "name": "MikeGPT",
+        "des": "AI Chatbot for Louisiana State University",
+        "long": null,
+        "link": "https://mikegpt.lsu.edu",
+        "tilt": "right"
+    },
     {
         "name": "Euclase",
         "des": "lisp bytecode interpreter & assembler",
-        "long": "a language featuring a custom assembler and bytecode. Turing complete, written in C11",
+        "long": "a language featuring a custom assembler and bytecode. Turing complete",
         "link": "https://github.com/jacoobes/euclase",
         "tilt": "center",
         "code": [
@@ -12,46 +20,36 @@
             "          (* n (fact (- n 1)))))",
             "",
             "(print (fact 10))"
-        ]
+        ],
+        "language": "C"
     },
-    {
-        "name": "MikeGPT",
-        "des": "AI Chatbot for Louisiana State University",
-        "long": null,
-        "link": "https://mikegpt.lsu.edu",
-        "tilt": "right",
-        "template": "t1"
-    },
+    
     {
         "name": "sern",
         "des": "Create a discord bot now",
         "long": null,
         "link": "https://github.com/sern-handler",
-        "tilt": "right",
-        "template": "t1"
+        "tilt": "right"
     },
     {
         "name": "GPT4ALL bindings",
         "des": "Node.js bindings for llama.cpp",
         "long": null,
         "link": "https://github.com/nomic-ai/gpt4all",
-        "tilt": "center",
-        "template": "t1"
+        "tilt": "center"
     },
     {
         "name": "slowscript",
         "link": "https://github.com/jacoobes/slowscript",
         "long": null,
         "des": "Programming Language",
-        "tilt": "center",
-        "template": "t1"
+        "tilt": "center"
     },
     {
         "name": "LoveBytes",
         "des": "Visual Novel",
         "long": null,
         "tilt": "center",
-        "template": "t1",
         "link": null
     },
     {
@@ -59,24 +57,21 @@
         "link": "https://github.com/jacoobes/airbin",
         "long": null,
         "des": "Pastebin",
-        "tilt": "center",
-        "template": "t1"
+        "tilt": "center"
     },
     {
         "name": "ScratchPaper",
         "link": "https://github.com/jacoobes/ScratchPaper",
         "long": null,
         "des": "Minecraft Calculator Plugin",
-        "tilt": "center",
-        "template": "t1"
+        "tilt": "center"
     },
     {
         "name": "ShaMo",
         "link": "https://github.com/mtpham017/hackathon2023sase",
         "long": null,
         "des": "Virtual Pantry and Recipe Generator",
-        "tilt": "center",
-        "template": "t1"
+        "tilt": "center"
     },
     
     {
@@ -84,8 +79,7 @@
         "link": "https://github.com/jacoobes/helium",
         "long": null,
         "des": "Code Editor",
-        "tilt": "center",
-        "template": "t1"
+        "tilt": "center"
 
     }
 ]

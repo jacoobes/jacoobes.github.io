@@ -10,7 +10,6 @@ eleventyComputed:
   title: "{{ project.name }} | jacoobes"
 ---
 
-
 {% set slug = project.name | slugify %}
 
 {% if slug == "euclase" %}
@@ -19,4 +18,6 @@ eleventyComputed:
     {% include "mikegpt.njk" %}
 {% elif slug == "sern" %}
     {% include "sern.njk" %}
+{% else %}
+    {% include "default.njk" %}
 {% endif %}

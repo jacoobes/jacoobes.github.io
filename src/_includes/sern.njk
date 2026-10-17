@@ -1,4 +1,12 @@
+
+
 <div class="{{slug}}">
+    <nav class="project-nav">
+        {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">← prev</a>{% endif %}
+        <a class="link-style back" href="/">home</a>
+        {% if pagination.href.next %}<a href="{{ pagination.href.next }}">next →</a>{% endif %}
+    </nav>
+
     <div class="project-meta">
         <p>(name)</p>
         <p class="project-name">{{ project.name }}</p>
