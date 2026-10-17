@@ -116,12 +116,14 @@ html {
 .project-item-name {
     line-height: var(--space-3); 
     padding: var(--space-2) 0;
+    align-self: baseline;
 }
 
 .project-item-des-center {
     grid-column: 5/9;
     cursor: pointer;
     text-align: right;
+    align-self: baseline;
     padding: var(--space-3) 0;
     font-size: var(--space-5);
     text-decoration: underline;
@@ -131,6 +133,7 @@ html {
     grid-column: 6/11;
     cursor: pointer;
     text-align: right;
+    align-self: baseline;
     padding: var(--space-3) 0;
     font-size: var(--space-5);
     text-decoration: underline;
@@ -158,6 +161,16 @@ html {
     grid-row: 1;
 }
 
+
+.euclase .project-meta {
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+.euclase .project-meta > * {
+    border-bottom: 1px solid var(--text-color);
+}
+
 .euclase .meta-label {
     grid-column: 1 / 3;
     align-self: center;
@@ -171,7 +184,6 @@ html {
 .euclase .project-link {
     align-self: center;
     color: var(--link-color);
-    text-decoration: underline;
 }
 
 .euclase .project-long {
@@ -183,6 +195,7 @@ html {
     line-height: 1.0;
     margin: 0;
     text-align: right;
+    text-wrap: balance;
 }
 
 .euclase .project-code {
@@ -190,6 +203,7 @@ html {
     grid-row: 5;
     tab-size: 2;
     font-size: var(--space-3);
+    align-content: end;
 }
 
 .euclase .project-code > pre {
