@@ -1,0 +1,34 @@
+<div class="{{slug}}">
+    <div class="project-meta">
+        <div>
+            <p>(name)</p>
+            <p class="project-name">{{ project.name }}</p>
+        </div>
+
+        <div>
+            <p>(link)</p>
+            {% if project.link %}
+                <a class="project-link" 
+                   href="{{ project.link }}"
+                   target="_blank"
+                   rel="noopener">View source ↗</a>
+            {% else %}
+                <span class="project-link"></span>
+            {% endif %}        
+        </div>
+    </div>
+    <div class="project-elaborated">
+        <div class="project-code">
+    {% raw %}<pre><code>(define (fact n)
+      (if (< n 2)
+          1
+          (* n (fact (- n 1)))))
+
+(print (fact 10))</code></pre>
+    {% endraw %}
+            </div>
+
+        <p class="project-long">{{ project.long  }} </p>
+    </div>
+    </div>
+</div>

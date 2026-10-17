@@ -16,7 +16,15 @@
     </script>
 </head>
 <body class="{{ bodyClass }}">
-    {{ content | safe }}
+    <main class="project-detail">
+        <nav class="project-nav">
+                {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">← prev</a>{% endif %}
+                <a class="link-style back" href="/">home</a>
+                {% if pagination.href.next %}<a href="{{ pagination.href.next }}">next →</a>{% endif %}
+
+        </nav>
+        {{ content | safe }}
+    </main>
 <script src="/index.js"></script>
 </body>
 </html>

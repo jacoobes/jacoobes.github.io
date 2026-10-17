@@ -5,7 +5,7 @@
         "long": "a language featuring a custom assembler and bytecode. Turing complete, written in C11",
         "link": "https://github.com/jacoobes/euclase",
         "tilt": "center",
-        "template": "euclase"
+        "code": "hello"
     },
     {
         "name": "MikeGPT",

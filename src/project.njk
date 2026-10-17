@@ -10,28 +10,13 @@ eleventyComputed:
   title: "{{ project.name }} | jacoobes"
 ---
 
-<main class="project-detail">
-    <nav class="project-nav">
-            {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">← prev</a>{% endif %}
-            <a class="link-style back" href="/">home</a>
-            {% if pagination.href.next %}<a href="{{ pagination.href.next }}">next →</a>{% endif %}
 
-    </nav>
-    <div class="{{project.template}}">
-        <div class="project-meta">
-            <p>(name)</p>
-            <p class="project-name">{{ project.name }}</p>
+{% set slug = project.name | slugify %}
 
-
-            <p>(link)</p>
-            {% if project.link %}
-            <a class="project-link" href="{{ project.link }}" target="_blank" rel="noopener">View source ↗</a>
-            {% else %}
-            <span class="project-link"></span>
-            {% endif %}        
-            </div>
-        {% if project.long %}
-            <p class="project-long">{{ project.long  }} </p>
-        {% endif %}
-    </div>
-</main>
+{% if slug == "euclase" %}
+    {% include "euclase.njk" %}
+{% elif slug == "mikegpt" %}
+    {% include "mikegpt.njk" %}
+{% elif slug == "sern" %}
+    {% include "sern.njk" %}
+{% endif %}
