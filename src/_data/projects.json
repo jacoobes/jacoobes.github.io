@@ -5,7 +5,14 @@
         "long": "a language featuring a custom assembler and bytecode. Turing complete, written in C11",
         "link": "https://github.com/jacoobes/euclase",
         "tilt": "center",
-        "code": "hello"
+        "code": [
+            "(define (fact n)",
+            "      (if (< n 2)",
+            "          1",
+            "          (* n (fact (- n 1)))))",
+            "",
+            "(print (fact 10))"
+        ]
     },
     {
         "name": "MikeGPT",

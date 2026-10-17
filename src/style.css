@@ -81,13 +81,6 @@ html {
     justify-self: end; 
 }
 
-.quote {
-    text-align: right;
-    grid-column: 3/-1;
-    grid-row: 2;
-    font-size: var(--space-6);
-}
-
 .links {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -144,12 +137,6 @@ html {
 }
 
 
-.project-item-des:hover {
-  border-color: var(--text-color);
-  background-color: var(--background-color);
-  z-index: 10;
-}
-
 .project-nav { 
     display: flex;
     width: 100%;
@@ -166,18 +153,14 @@ html {
 .euclase .project-meta {
     align-self: start;
     display: grid;
-    grid-template-columns: auto repeat(10, 1fr);
-    grid-template-rows: 1fr 1fr;
-    column-gap: var(--space-2);
-    row-gap: var(--space-2);
-    grid-auto-rows: auto;
     row-gap: var(--space-2);
     column-gap: var(--space-3);
     width: 100%;
+
+    grid-template-columns: auto 1fr;
 }
 
-.euclase .project-description {
-    font-size: var(--space-3);
+.euclase .project-meta > div {
 }
 
 .euclase .project-link {
@@ -199,7 +182,7 @@ html {
 .euclase .project-code {
     margin: 0;
     tab-size: 2;
-    font-size: var(--space-4);
+    font-size: var(--space-3);
     display: flex;
     justify-content: center;
 }
