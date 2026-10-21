@@ -1,0 +1,33 @@
+<div class="{{ slug }}">
+    <nav class="project-nav">
+        {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">← prev</a>{% endif %}
+        <a class="link-style back" href="/">home</a>
+        {% if pagination.href.next %}<a href="{{ pagination.href.next }}">next →</a>{% endif %}
+    </nav>
+
+    <div class = "project-meta">
+        <p class="meta-label">(name)</p>
+        <p class="project-name meta-value">{{ project.name }}</p>
+
+        <p class="meta-label">(link)</p>
+        {% if project.link %}
+            <a class="project-link meta-value"
+               href="{{ project.link }}"
+               target="_blank"
+               rel="noopener">View source ↗</a>
+        {% else %}
+            <span class="project-link meta-value"></span>
+        {% endif %}
+
+        <p class="meta-label">(language)</p>
+        <span class="meta-value">{{ project.language }}</span>
+    </div>
+
+    {% if project.code %}
+        <div class="project-code">
+            <pre><code>{{ project.code | join("\n") }}</code></pre>
+        </div>
+    {% endif %}
+
+    <p class="project-long">{{ project.long }}</p>
+</div>

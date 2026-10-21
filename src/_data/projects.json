@@ -34,16 +34,35 @@
     {
         "name": "GPT4ALL bindings",
         "des": "Node.js bindings for llama.cpp",
-        "long": null,
+        "long": "Node.js bindings for llama.cpp, running LLMs locally.",
         "link": "https://github.com/nomic-ai/gpt4all",
-        "tilt": "center"
+        "tilt": "center",
+        "code": [
+            "import * as g from 'gpt4all';",
+            "",
+            "const m = await g.loadModel(",
+            "  'orca-mini-3b-gguf2-q4_0.gguf');",
+            "const r = await g.createCompletion(",
+            "  m, 'What is 1 + 1?');",
+            "console.log(r.choices[0].message);"
+        ],
+        "language": "C++"
     },
     {
         "name": "slowscript",
         "link": "https://github.com/jacoobes/slowscript",
-        "long": null,
+        "long": "A tree-walk interpreter in Kotlin. Yes, it's slow.",
         "des": "Programming Language",
-        "tilt": "center"
+        "tilt": "center",
+        "code": [
+            "task fib(n) {",
+            "    if (n <= 1) return 1;",
+            "    return fib(n - 1) + fib(n - 2);",
+            "}",
+            "",
+            "log(fib(10))"
+        ],
+        "language": "Kotlin"
     },
     {
         "name": "LoveBytes",
