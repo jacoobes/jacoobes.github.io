@@ -23,16 +23,21 @@ a {
     --space-6: 64px;
     --space-7: 128px;
     --space-8: 256px;
+
+    --text-1: 16px;
+    --text-2: 32px;
+    --text-3: 64px;
+    --text-4: 128px;
 }
 
 .dark {
-  --background-color: black;
-  --text-color: white;
+  --background-color: #121212;
+  --text-color: #f2f2f2;
   --link-color: #60a5fa;
 }
 
 html {
-    font-family: 'Helvetica';
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .wrapper {
@@ -56,7 +61,7 @@ html {
 #dark-mode-toggle { margin: 0 var(--space-2) 0 var(--space-2); }
 
 .myname { 
-    font-size: var(--space-3);
+    font-size: var(--text-1);
     text-align: right;
 }
 
@@ -109,7 +114,7 @@ html {
 
 .project-item-name {
     grid-column: 2/4;
-    font-size: var(--space-3);
+    font-size: var(--text-1);
 }
 
 .project-item-idx,
@@ -125,7 +130,7 @@ html {
     text-align: right;
     align-self: baseline;
     padding: var(--space-3) 0;
-    font-size: var(--space-5);
+    font-size: var(--text-2);
     text-decoration: underline;
 }
 
@@ -135,7 +140,7 @@ html {
     text-align: right;
     align-self: baseline;
     padding: var(--space-3) 0;
-    font-size: var(--space-5);
+    font-size: var(--text-2);
     text-decoration: underline;
 }
 
@@ -190,7 +195,7 @@ html {
     grid-column: 7 / -1;
     grid-row: 2 / -1;
     align-self: end;
-    font-size: min(var(--space-7), 6vw, 12dvh);
+    font-size: min(var(--text-4), 6vw, 12dvh);
     text-indent: var(--space-6);
     line-height: 1.0;
     margin: 0;
@@ -202,7 +207,7 @@ html {
     grid-column: 1 / 2;
     grid-row: 5;
     tab-size: 2;
-    font-size: var(--space-3);
+    font-size: var(--text-1);
     align-content: end;
 }
 
@@ -258,7 +263,7 @@ html {
     grid-column: 7 / -1;
     grid-row: 2 / -1;
     align-self: end;
-    font-size: min(var(--space-7), 6vw, 12dvh);
+    font-size: min(var(--text-4), 6vw, 12dvh);
     text-indent: var(--space-6);
     line-height: 1.0;
     margin: 0;
@@ -270,7 +275,7 @@ html {
     grid-column: 1 / 2;
     grid-row: 5;
     tab-size: 2;
-    font-size: var(--space-3);
+    font-size: var(--text-1);
     align-content: end;
 }
 
@@ -326,7 +331,7 @@ html {
     grid-column: 7 / -1;
     grid-row: 2 / -1;
     align-self: end;
-    font-size: min(var(--space-7), 6vw, 12dvh);
+    font-size: min(var(--text-4), 6vw, 12dvh);
     text-indent: var(--space-6);
     line-height: 1.0;
     margin: 0;
@@ -338,7 +343,7 @@ html {
     grid-column: 1 / 2;
     grid-row: 5;
     tab-size: 2;
-    font-size: var(--space-3);
+    font-size: var(--text-1);
     align-content: end;
 }
 
@@ -348,6 +353,49 @@ html {
 }
 
 /* END SLOWSCRIPT CSS */
+
+/* MIKEGPT CSS */
+
+.mikegpt {
+    min-height: calc(95dvh - var(--space-1));
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto 1fr;
+    column-gap: var(--space-3);
+    row-gap: var(--space-2);
+}
+
+.mikegpt .project-nav {
+    grid-column: 1 / -1;
+}
+
+.mikegpt .project-meta {
+    grid-column: 1 / 7;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: var(--space-3);
+}
+
+.mikegpt .project-meta > * {
+    margin: 0;
+    padding: var(--space-2) 0;
+    border-bottom: 1px solid var(--text-color);
+}
+
+.mikegpt .project-link {
+    color: var(--link-color);
+}
+/* no code box, so the statement takes the full width and sits flush-left */
+.mikegpt .project-long {
+    grid-column: 1 / -1;
+    align-self: end;
+    font-size: min(var(--text-4), 6vw, 12dvh);
+    line-height: 1.0;
+    margin: 0;
+    text-wrap: balance;
+}
+
+/* END MIKEGPT CSS */
 
 /* DEFAULT PROJECT CSS */
 
@@ -371,7 +419,7 @@ html {
 }
 
 .default .project-name {
-    font-size: var(--space-5);
+    font-size: var(--text-2);
 }
 
 .default .project-des,
@@ -385,7 +433,7 @@ html {
 }
 
 .default .project-long {
-    font-size: var(--space-6);
+    font-size: var(--text-3);
     text-indent: var(--space-4);
     line-height: 1.0;
     margin-top: var(--space-4);
