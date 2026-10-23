@@ -3,9 +3,12 @@
     {
         "name": "MikeGPT",
         "des": "AI Chatbot for Louisiana State University",
-        "long": null,
+        "long": "LSU's custom agent creator and chatbot consuming 40,000 public documents",
         "link": "https://mikegpt.lsu.edu",
-        "tilt": "right"
+        "tilt": "right",
+        "role": "AI & Software Development intern",
+        "launched": "December 2024",
+        "access": "LSU faculty & staff, via SSO"
     },
     {
         "name": "Euclase",

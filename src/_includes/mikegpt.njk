@@ -6,18 +6,33 @@
     </nav>
 
     <div class="project-meta">
-        <p>(name)</p>
-        <p class="project-name">{{ project.name }}</p>
+        <p class="meta-label">(name)</p>
+        <p class="project-name meta-value">{{ project.name }}</p>
 
+        <p class="meta-label">(about)</p>
+        <p class="meta-value">{{ project.des }}</p>
 
-        <p>(link)</p>
+        <p class="meta-label">(link)</p>
         {% if project.link %}
-        <a class="project-link" href="{{ project.link }}" target="_blank" rel="noopener">View source ↗</a>
+            <a class="project-link meta-value"
+               href="{{ project.link }}"
+               target="_blank"
+               rel="noopener">Visit site ↗</a>
         {% else %}
-        <span class="project-link"></span>
-        {% endif %}        
-        </div>
+            <span class="project-link meta-value"></span>
+        {% endif %}
+
+        <p class="meta-label">(role)</p>
+        <p class="meta-value">{{ project.role }}</p>
+
+        <p class="meta-label">(launched)</p>
+        <p class="meta-value">{{ project.launched }}</p>
+
+        <p class="meta-label">(access)</p>
+        <p class="meta-value">{{ project.access }}</p>
+    </div>
+
     {% if project.long %}
-        <p class="project-long">{{ project.long  }} </p>
+        <p class="project-long">{{ project.long }}</p>
     {% endif %}
 </div>
