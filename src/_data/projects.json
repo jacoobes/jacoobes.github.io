@@ -75,9 +75,15 @@
     {
         "name": "ScratchPaper",
         "link": "https://github.com/jacoobes/ScratchPaper",
-        "long": null,
+        "long": "A math DSL for redstone, typed straight into the Minecraft command line.",
         "des": "Minecraft Calculator Plugin",
-        "tilt": "center"
+        "tilt": "center",
+        "quote": "I hate pulling out my calculator to do math for my redstone projects",
+        "code": [
+            "/eval cmp(1, 5, 2)",
+            "/eval fn stacks(n) = n / 64; stacks(CHUNK * CHUNK)"
+        ],
+        "language": "Java"
     },
     {
         "name": "ShaMo",
