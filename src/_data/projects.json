@@ -43,10 +43,8 @@
         "code": [
             "import * as g from 'gpt4all';",
             "",
-            "const m = await g.loadModel(",
-            "  'orca-mini-3b-gguf2-q4_0.gguf');",
-            "const r = await g.createCompletion(",
-            "  m, 'What is 1 + 1?');",
+            "const m = await g.loadModel('orca-mini-3b-q4_0.gguf')",
+            "const r = await g.createCompletion(m, 'What is 1 + 1?');",
             "console.log(r.choices[0].message);"
         ],
         "language": "C++"
@@ -73,13 +71,6 @@
         "long": null,
         "tilt": "center",
         "link": null
-    },
-    {
-        "name": "AirBin",
-        "link": "https://github.com/jacoobes/airbin",
-        "long": null,
-        "des": "Pastebin",
-        "tilt": "center"
     },
     {
         "name": "ScratchPaper",

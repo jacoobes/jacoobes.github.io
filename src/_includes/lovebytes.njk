@@ -1,0 +1,28 @@
+<div class="{{ slug }}">
+    <nav class="project-nav">
+        {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">← prev</a>{% endif %}
+        <a class="link-style back" href="/">home</a>
+        {% if pagination.href.next %}<a href="{{ pagination.href.next }}">next →</a>{% endif %}
+    </nav>
+
+    <p class="project-idx">{{ pagination.pageNumber | padzero }}</p>
+
+    <div class="project-meta">
+        <p class="meta-label">(name)</p>
+        <p class="meta-value">{{ project.name }}</p>
+
+        <p class="meta-label">(type)</p>
+        <p class="meta-value">{{ project.des }}</p>
+
+        {% if project.link %}
+            <p class="meta-label">(link)</p>
+            <a class="project-link meta-value" href="{{ project.link }}" target="_blank" rel="noopener">View source ↗</a>
+        {% endif %}
+    </div>
+
+    {% if project.long %}
+        <p class="project-long">{{ project.long }}</p>
+    {% endif %}
+
+    <h1 class="project-title">{{ project.name }}</h1>
+</div>
