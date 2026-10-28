@@ -3,26 +3,13 @@ layout: base.njk
 bodyClass: wrapper
 ---
 
-<div class="projects"> 
-      {% for project in projects %}
-        <span class="project-item-idx">{{ loop.index0 | padzero }}</span>
-        <span class="project-item-name"><strong> {{ project.name }} </strong></span>
-
-        <a href="/projects/{{ project.name | slugify }}" class="project-item-des-{{ project.tilt }}">{{ project.des }} </a>
-      {% endfor %}
-</div>
-
-<div class="info"> 
-    <div class="info-left"> 
-        <span>(name)</span> 
-        <span class="myname"> jacoobes</span>
-        <span>(settings)</span>
-        <div class="settinbutton">
-                <label class="theme-toggle"></label>
-                <input type="checkbox" id="dark-mode-toggle">
-                <span>Dark</span>
-        </div>
-        <span class="linktitle">(links)</span>
+<header class="info">
+    <div class="info-name">
+        <span class="info-label">(name)</span>
+        <span class="myname">jacoobes</span>
+    </div>
+    <div class="info-links">
+        <span class="info-label">(links)</span>
         <div class="links">
         {% for link in links %}
             <a class="link-style" href="{{ link.url }}">
@@ -31,4 +18,22 @@ bodyClass: wrapper
         {% endfor %}
         </div>
     </div>
+    <div class="info-settings">
+        <span class="info-label">(settings)</span>
+        <div>
+            <input type="checkbox" id="dark-mode-toggle">
+            <label for="dark-mode-toggle">Dark</label>
+        </div>
+    </div>
+</header>
+
+<div class="projects">
+      {% for project in projects %}
+      <div class="project-row">
+        <span class="project-item-idx">{{ loop.index0 | padzero }}</span>
+        <span class="project-item-name"><strong> {{ project.name }} </strong></span>
+
+        <a href="/projects/{{ project.name | slugify }}" class="project-item-des-{{ project.tilt }}">{{ project.des }} </a>
+      </div>
+      {% endfor %}
 </div>
