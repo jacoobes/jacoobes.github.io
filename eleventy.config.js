@@ -9,7 +9,11 @@ export default function(eleventyConfig) {
     formats: ["avif", "webp", "jpeg"],
 
     // Output widths (in pixels). Aspect ratio is preserved.
-    widths: [320, 640, 960, 1280],
+    // "auto" keeps the original width so retina screens get full-res pixels.
+    widths: [320, 640, 960, 1280, "auto"],
+
+    // Sharp's AVIF default (q50) smears text and pixel-art edges in screenshots.
+    sharpAvifOptions: { quality: 80 },
 
     // Default attributes applied to every <img> (per-image markup overrides these)
     htmlOptions: {
