@@ -45,3 +45,30 @@ if (togglebtn) {
 //  successTemplate: '<span id="form-success">Thank you!</span>'
 //});
 //
+
+// LoveBytes slideshow — manual prev/next controls
+if (typeof document !== 'undefined') {
+  document.querySelectorAll('[data-slideshow]').forEach((root) => {
+    const slides = Array.from(root.querySelectorAll('.lb-slide'));
+    if (!slides.length) return;
+
+    const counter = root.querySelector('.lb-counter');
+    const prev = root.querySelector('.lb-prev');
+    const next = root.querySelector('.lb-next');
+
+    const pad = (n) => String(n + 1).padStart(2, '0');
+    const total = String(slides.length).padStart(2, '0');
+    let index = 0;
+
+    const show = (n) => {
+      index = (n + slides.length) % slides.length;
+      slides.forEach((slide, i) => slide.classList.toggle('is-active', i === index));
+      if (counter) counter.textContent = `${pad(index)} / ${total}`;
+    };
+
+    if (prev) prev.addEventListener('click', () => show(index - 1));
+    if (next) next.addEventListener('click', () => show(index + 1));
+
+    show(0);
+  });
+}
